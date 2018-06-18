@@ -158,7 +158,7 @@ class AgmoPaymentsSimpleProtocol {
      *
      * @throws Exception
      */
-    public function createTransaction($country, $price, $currency, $label, $refId, $payerId, $vatPL = '', $category = '', $method = 'ALL', $account = '', $email = '', $phone = '', $productName = '', $language = '',
+    public function createTransaction($country, $price, $currency, $label, $refId, $payerId, $method = 'ALL', $account = '', $email = '', $phone = '', $productName = '', $language = '',
                                       $preauth = false, $reccurring = false, $reccurringId = null
     ) {
 
@@ -176,8 +176,6 @@ class AgmoPaymentsSimpleProtocol {
             'label' => $label,
             'refId' => $refId,
             'payerId' => $payerId,
-            'vatPL' => $vatPL,
-            'cat' => $category,
             'method' => $method,
             'account' => $account,
             'email' => $email,

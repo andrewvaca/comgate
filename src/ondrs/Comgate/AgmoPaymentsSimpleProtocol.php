@@ -108,11 +108,11 @@ class AgmoPaymentsSimpleProtocol {
         curl_setopt($c, CURLOPT_POSTFIELDS, $data);
         curl_setopt($c, CURLOPT_SSL_VERIFYPEER, 0);
         $responseBody = curl_exec($c);
-        curl_close($c);
 
         if(!$responseBody) {
             throw new Exception(curl_error($c), curl_errno($c));
         }
+        curl_close($c);
 
         return $responseBody;
     }

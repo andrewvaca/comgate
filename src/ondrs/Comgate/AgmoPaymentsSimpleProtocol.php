@@ -211,8 +211,10 @@ class AgmoPaymentsSimpleProtocol {
             throw new Exception('Transaction creation error '.$responseCode.': '.$responseMessage);
         }
         $this->_transactionId = $this->_checkParam($responseParams, 'transId');
-        $this->_redirectUrl = $this->_checkParam($responseParams, 'redirect');
-
+        
+        if ($recurringId == null) {
+            $this->_redirectUrl = $this->_checkParam($responseParams, 'redirect');
+        }
     }
 
     /**

@@ -212,7 +212,7 @@ class AgmoPaymentsSimpleProtocol {
         }
         $this->_transactionId = $this->_checkParam($responseParams, 'transId');
         
-        if ($recurringId == null) {
+        if ($reccurringId == null) {
             $this->_redirectUrl = $this->_checkParam($responseParams, 'redirect');
         }
     }
